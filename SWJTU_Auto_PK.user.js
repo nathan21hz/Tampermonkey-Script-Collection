@@ -1,18 +1,16 @@
 // ==UserScript==
 // @name         西南交大自动评课工具
 // @namespace    https://github.com/nathan21hz/SWJTU_Auto_PK
-// @version      1.0
+// @version      1.1
 // @description  自动一键好评/差评课程
 // @author       Nathan_21hz
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=viewAssess*
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=list*
 // @require      http://code.jquery.com/jquery-1.8.2.js
-// @grant        GM_setValue
-// @grant        GM_getValue
 // @grant        GM_openInTab
 // ==/UserScript==
-    var ctd=500;
 (function() {
+     var ctd=500;
     'use strict';
     function addButton(){
         var box = $('td[colspan="2"]')[0];
@@ -36,10 +34,9 @@
         box.appendChild(button);
     }else{
         addButton();
-        GM_setValue(ctd,25);
+        ctd=20;
         window.setInterval(function() {
-            var timeleft = GM_getValue(ctd)
-            if(timeleft==0){
+            if(ctd==0){
                 var ps = document.answerForm.problem_id;//问题
                 var ids = "",ans = "";
                 for(var i=0;i<ps.length;i++){
@@ -60,8 +57,8 @@
                 document.form2.keyword.value="null";
                 document.form2.submit();
             }else{
-                $('#countdown').html('等待'+timeleft.toString()+'s后自动好评');
-                GM_setValue(ctd,timeleft-1);
+                $('#countdown').html('等待'+ctd.toString()+'s后自动好评');
+                ctd--;
             }
     }, 1000);
     }
