@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         西南交大自动评课工具
 // @namespace    https://github.com/nathan21hz/SWJTU_Auto_PK
-// @version      1.1
+// @version      1.2
 // @description  自动一键好评/差评课程
 // @author       Nathan_21hz
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=viewAssess*
@@ -29,7 +29,7 @@
         box.innerHTML += "&nbsp;&nbsp;";
         var button = document.createElement("input"); //创建一个input对象（提示框按钮）
         button.setAttribute("type", "button");
-        button.setAttribute("value", "打开所有待评价页面");
+        button.setAttribute("value", "一键好评全部");
         button.setAttribute("id", "openall");
         box.appendChild(button);
     }else{
