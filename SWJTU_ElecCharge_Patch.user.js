@@ -2,7 +2,7 @@
 // @name         西南交大电费充值页面修正补丁
 // @namespace    swjtu.edu.cn
 // @version      1.0
-// @description  西南交大电费充值页面修正补丁
+// @description  西南交大电费充值页面修正补丁，安装后可在其他各浏览器上使用电费充值页面
 // @author       Nathan_21hz
 // @match        http://card.swjtu.edu.cn/accountxnjddfInput.action?dktype=0
 // @require      http://code.jquery.com/jquery-1.8.2.js
