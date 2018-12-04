@@ -1,1 +1,1 @@
-# SWJTU_Auto_PK
+# Tampermonkey Plugin Collectuon
