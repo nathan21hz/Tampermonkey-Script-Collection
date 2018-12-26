@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         西南交大自动评课工具
 // @namespace    https://github.com/nathan21hz/SWJTU_Auto_PK
-// @version      1.3
+// @version      1.4
 // @description  自动一键好评/差评课程
 // @author       Nathan_21hz
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=viewAssess*
@@ -38,19 +38,26 @@
         window.setInterval(function() {
             if(ctd==0){
                 var ps = document.answerForm.problem_id;//问题
-                var ids = "",ans = "";
+                var ids = "",ans = "",sco = "",per = "";
                 for(var i=0;i<ps.length;i++){
                     var id = ps[i].value;
                     var answer = "";
+                    var score = "";
+                    var percent = $(ps[i]).attr("perc");
                     answer = document.getElementsByName("problem"+id)[0].value;
+                    score = $(document.getElementsByName("problem"+id)[0]).attr("score");
                     if(answer==""){
                         answer = "无"
                     }
                     ids+=("_"+id);
                     ans+=("_"+answer);
+                    sco+=("_"+score);
+                    per+=("_"+percent);
                 }
                 document.form2.id.value=ids;
                 document.form2.answer.value=ans;
+                document.form2.scores.value=sco;
+                document.form2.percents.value=per;
                 document.form2.assess_id.value=document.answerForm.assess_id.value;
                 document.form2.templateFlag.value="0";
                 document.form2.t.value=Math.random();
@@ -84,4 +91,3 @@
         }
     });
 })();
-
