@@ -1,1 +1,1 @@
-# Tampermonkey Plugin Collectuon
+# Tampermonkey Plugin Collection
