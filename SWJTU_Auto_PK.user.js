@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         西南交大自动评课工具
 // @namespace    https://github.com/nathan21hz/SWJTU_Auto_PK
-// @version      1.4
+// @version      1.5
 // @description  自动一键好评/差评课程
 // @author       Nathan_21hz
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=viewAssess*
 // @include      http*://*.vatuu.com/vatuu/AssessAction?setAction=list*
+// @include      http://jwc.swjtu.edu.cn/vatuu/AssessAction?setAction=viewAssess*
+// @include      http://jwc.swjtu.edu.cn/vatuu/AssessAction?setAction=list*
 // @require      http://code.jquery.com/jquery-1.8.2.js
 // @grant        GM_openInTab
 // ==/UserScript==
